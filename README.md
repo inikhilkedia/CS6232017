@@ -1,48 +1,42 @@
-# CS6232017
-CS 623 GROUP PROJECT
 
+CS 623 Summer I 2017
+Exercise on GitHub and Git
 
-Guidelines
+In this project, we will be using GitHub for assignment submissions and code versioning.
+The goal of this exercise is to get you started with Git and GitHub. Even if you are using Git and GitHub regularly you need to do this exercise and submit it. If you already did it, you need to create the required repository and fill out the required documents.
+Please follow the instructions completely. Work that does not follow the instructions (including naming conventions) will NOT be accepted and will result in a grade of 0.
+Part 1:
+Create a GitHub account (if you do not have one)
+https://github.com 
+Submit your GitHub username in the form here:
+http://bit.ly/2tGJ8FK
+as described in the file. The file should be organized alphabetically by last names.
+I will check your work directly from your GitHub account. 
+Part 2:
+Install Git bash http://git-scm.com/downloads and browse the documentation.  
+Part 3:
+Answer the following questions.
+What is GitHub? When was it created? Why? By who? What similar platforms exist? Why would you use such a platform? (Answer between 2 and 3 lines)
+Answer these questions in a Word file called LastnameFirstnameGitTutorial-mm-dd-yyyy.docx. Please respect the naming conventions!
+Part 4:
+Go through the Git tutorial here: https://try.github.io. While doing the tutorial, save your work the LastnameFirstnameGitTutorial-mm-dd-yyyy.docx file. 
+While there is a GUI to use Git and GitHub, developers use the command line!
 
-•	This is a group project that you will have to do in a group of 2 or 3 students. Post your teams in Slack. 
-•	The deadline was provided in the syllabus.
-•	You will present the project online and share your screen.
-•	You will use Java.
-•	You will use MySQL or PostgreSQL.
-
-We consider the Product, Depot and Stock relations / tables that you implemented in previous assignments.
-
-The key of product is #prod.
-The key of depot is #dep.
-The key of stock is #prod, #dep.
-
-
-
-1.	Reverse engineering (20 points)
-
-What ERD corresponds to the provided schema?
-
-You will present your ERD during the presentation. You will also submit it in BlackBoard.
-
-2.	Write the following transactions in Java with MySQL. A transaction implements the ACID properties. If the code you will provide does not implement the ACID properties, you will get 0 for the question. (50 points)
-
-Group 1 – The product p1 is deleted from Product and Stock. 
-
-Group 2 – The depot d1 is deleted from Depot and Stock.
-
-Group 3 – The product p1 changes its name to pp1 in Product and Stock.
-
-Group 4 – The depot d1 changes its name to dd1 in Depot and Stock.
-
-You will provide the code in GitHub. No need to submit it in BlackBoard.
-
-You will demo the transaction during the presentation.
-
-3.	Do the GitHub exercise (INDIVIDUAL). (15 points – Individual)
-
-Post your GitHub url in the required Google Docs.
-
-4.	Each member of the team posts the code of Week 5 (SQL) and Week 6 (Java) in GitHub. (INDIVIDUAL) (15 points – Individual)
-
-
-
+Part 5:
+Become familiar with the following terms:
+•	Repository
+•	Commit
+•	Push
+•	Branch
+•	Fork
+•	Merge
+•	Clone
+•	Pull
+•	Pull request 
+Part 6:
+Push the Word file in YOUR GitHub account in a repository called CS6232017. Please respect the naming conventions! You will use this repository for the project. Your repository will be accessible at: https://github.com/yourpseudo/CS6232017. 
+Part 7:
+Add an issue with title “GitHub training” in your repository called CS6232017. Issues are used for tasks and bug reports.
+Part 8:
+Edit the main page of the wiki in your repository called CS6232017. Add the title “CS 629 2017” to the page. The wiki will be used for documenting the project.
+You can also override Readme.md to document your repository.
