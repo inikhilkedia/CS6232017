@@ -65,6 +65,43 @@ public class Transaction {
 				}
 				System.out.println("\n");
 				depotbefore.close();
+				
+				ResultSet stockbefore = stmt.executeQuery("SELECT * FROM cs623projectschema.stock;");
+				System.out.println("\t Stock \t");
+
+				while(stockbefore.next()) {
+					//Retrieve by column name
+					//Stock
+					String prodid = stockbefore.getString("prodid");
+					String depid = stockbefore.getString("depid");
+					int quantity = stockbefore.getInt("quantity");
+					// Display values
+					System.out.print("Prodid: "+ prodid +"\t");
+					System.out.print("Depid: "+ depid +"\t");
+					System.out.print("Quantity: "+ quantity +"\t");
+					System.out.println();
+				}
+				System.out.println("\n");
+				stockbefore.close();
+				
+				ResultSet productafter = stmt.executeQuery("SELECT * FROM cs623projectschema.product;");
+				System.out.println("\t Product \t");
+				
+				while(productafter.next()) {
+					//Retrieve by column name
+					//Product
+					String prodid = productafter.getString("prodid");
+					String pname = productafter.getString("pname");
+					double price = productafter.getDouble("price");
+					
+					// Display values
+					System.out.print("Prodid: "+prodid+"\t");
+					System.out.print("Pname: "+pname+"\t");
+					System.out.print("Price: "+price+"\t");
+					System.out.println();
+				}
+				productafter.close();
+				
 		} catch (SQLException e) {
 			System.out.println("catch Exception");
 			e.printStackTrace();
