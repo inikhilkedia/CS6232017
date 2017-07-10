@@ -139,8 +139,5 @@ public class Transaction_WO_ACID {
 			}
 			stockafter.close();
 			System.out.println("\n");
-			
-		stmt.close();
-		conn.close();
 	}
 }
