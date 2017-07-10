@@ -5,7 +5,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class Transaction {
+public class Transaction_WO_ACID {
 
 	public static void main(String args[]) throws SQLException, IOException, ClassNotFoundException {
 		
@@ -15,15 +15,8 @@ public class Transaction {
 		// Connect to the database
 		Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres?user=postgres&password=cs6232017");
 		
-		// For atomicity
-		conn.setAutoCommit(false);		
-		
-		// For isolation 
-		conn.setTransactionIsolation(Connection.TRANSACTION_SERIALIZABLE); 
-		
 		Statement stmt = null;
 		
-		try {
 			// create statement object
 			stmt = conn.createStatement();
 			
@@ -147,14 +140,7 @@ public class Transaction {
 			stockafter.close();
 			System.out.println("\n");
 			
-		} catch (SQLException e) {
-			System.out.println("catch Exception");
-			e.printStackTrace();
-			// For atomicity
-			conn.rollback();
-			stmt.close();
-			conn.close();
-			return;
-		} 
+		stmt.close();
+		conn.close();
 	}
 }
