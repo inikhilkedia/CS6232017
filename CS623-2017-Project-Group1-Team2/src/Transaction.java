@@ -85,8 +85,8 @@ public class Transaction {
 				stockbefore.close();
 			
 				//DELETE
-			//stmt.executeUpdate("DELETE FROM postgres.cs623projectschema.product WHERE prodid = 'p1';");
-			
+			stmt.executeUpdate("DELETE FROM postgres.cs623projectschema.product WHERE prodid = 'p1';");
+			System.out.println("DELETE FROM postgres.cs623projectschema.product WHERE prodid = 'p1';\n");
 			//After Delete
 			System.out.println("AFTER ! \n");
 			
@@ -155,6 +155,9 @@ public class Transaction {
 			stmt.close();
 			conn.close();
 			return;
-		} 
+		}
+		conn.rollback();
+		stmt.close();
+		conn.close();
 	}
 }

@@ -23,7 +23,7 @@ public class Transaction_WO_ACID {
 			//Before Delete
 			System.out.println("BEFORE ! \n");
 			
-			ResultSet productbefore = stmt.executeQuery("SELECT * FROM cs623projectschema.product;");
+			ResultSet productbefore = stmt.executeQuery("SELECT * FROM nacs623projectschema.product;");
 			System.out.println("\t Product \t");
 			
 			while(productbefore.next()) {
@@ -41,7 +41,7 @@ public class Transaction_WO_ACID {
 			System.out.println("\n");
 			productbefore.close();
 			
-			ResultSet depotbefore = stmt.executeQuery("SELECT * FROM cs623projectschema.depot;");
+			ResultSet depotbefore = stmt.executeQuery("SELECT * FROM nacs623projectschema.depot;");
 			System.out.println("\t Depot \t");
 			
 				while(depotbefore.next()) {
@@ -59,7 +59,7 @@ public class Transaction_WO_ACID {
 				System.out.println("\n");
 				depotbefore.close();
 				
-				ResultSet stockbefore = stmt.executeQuery("SELECT * FROM cs623projectschema.stock;");
+				ResultSet stockbefore = stmt.executeQuery("SELECT * FROM nacs623projectschema.stock;");
 				System.out.println("\t Stock \t");
 
 				while(stockbefore.next()) {
@@ -78,12 +78,13 @@ public class Transaction_WO_ACID {
 				stockbefore.close();
 			
 				//DELETE
-			//stmt.executeUpdate("DELETE FROM postgres.cs623projectschema.product WHERE prodid = 'p1';");
+			stmt.executeUpdate("DELETE FROM postgres.nacs623projectschema.product WHERE prodid = 'p1';");
+			System.out.println("DELETE FROM postgres.nacs623projectschema.product WHERE prodid = 'p1'\n;");
 			
 			//After Delete
 			System.out.println("AFTER ! \n");
 			
-			ResultSet productafter = stmt.executeQuery("SELECT * FROM cs623projectschema.product;");
+			ResultSet productafter = stmt.executeQuery("SELECT * FROM nacs623projectschema.product;");
 			System.out.println("\t Product \t");
 			
 			while(productafter.next()) {
@@ -102,7 +103,7 @@ public class Transaction_WO_ACID {
 			productafter.close();
 			System.out.println("\n");
 			
-			ResultSet depotafter = stmt.executeQuery("SELECT * FROM cs623projectschema.depot;");
+			ResultSet depotafter = stmt.executeQuery("SELECT * FROM nacs623projectschema.depot;");
 			System.out.println("\t Depot \t");
 			
 			while(depotafter.next()) {
@@ -121,7 +122,7 @@ public class Transaction_WO_ACID {
 			depotafter.close();
 			System.out.println("\n");
 			
-			ResultSet stockafter = stmt.executeQuery("SELECT * FROM cs623projectschema.stock;");
+			ResultSet stockafter = stmt.executeQuery("SELECT * FROM nacs623projectschema.stock;");
 			System.out.println("\t Stock \t");
 			
 			while(stockafter.next()) {
